@@ -2,6 +2,13 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Title>DatabaseIdGenerator</Title>
+        <Authors>Vladimir Yarovenko &lt;yavapro@gmail.com&gt;</Authors>
+        <Description>Generator database ids</Description>
+        <PackageProjectUrl>https://github.com/yavapro/Generators</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/yavapro/Generators.git</RepositoryUrl>
+        <PackageTags>Database ClusterId Id</PackageTags>
     </PropertyGroup>
 
 </Project>

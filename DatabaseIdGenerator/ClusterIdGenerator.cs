@@ -2,7 +2,7 @@
 {
     using System;
     
-    public class ClusterIdGenerator
+    public class ClusterIdGenerator : IClusterIdGenerator
     {
         private readonly DateTime epochStartPoint;
         private Random random;
@@ -28,11 +28,7 @@
         {
             this.epochStartPoint = epochStartPoint;
         }
-
-        /// <summary>
-        /// Generate new Id from timestamp (38 bit) + shardId (26 bit)
-        /// </summary>
-        /// <param name="shardId">26 bit value</param>
+       
         public long GenerateTwoComponent(int shardId)
         {
             DateTime now = DateTime.UtcNow;
@@ -46,10 +42,6 @@
             return id;
         }
         
-        /// <summary>
-        /// Generate new Id from timestamp (38 bit) + shardId (16 bit) + random (10 bit)
-        /// </summary>
-        /// <param name="shardId">16 bit value</param>
         public long GenerateThreeComponent(ushort shardId)
         {
             DateTime now = DateTime.UtcNow;
